@@ -1,16 +1,34 @@
-# React + Vite
+# 🌊 Habitantes das Profundezas (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação desenvolvida para fins de estudo e prática de **React** ⚛️, com foco em componentes, estilização responsiva com CSS Grid e interatividade com estados (`useState`). O projeto explora criaturas marinhas misteriosas das profundezas do oceano 🦑, apresentando cartões informativos e uma janela modal interativa para ampliar e explorar as imagens.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **React** ⚛️ (Biblioteca JavaScript para construção da interface)
+* **Vite** ⚡ (Ferramenta de build e servidor de desenvolvimento ultrarrápido)
+* **CSS3** 🎨 (Estilização customizada, Flexbox e CSS Grid Responsivo)
+* **Git e GitHub** 🐙 (Controle de versão e hospedagem)
 
-## React Compiler
+## 📱 Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Grid Responsivo:** Layout adaptável que se ajusta automaticamente para celular 📱 (1 coluna), tablet 📟 (2 colunas) e computador 💻 (3 colunas).
+* **Galeria de Criaturas:** Exibição de 6 espécies marinhas 🐠 com informações detalhadas sobre suas adaptações únicas.
+* **Modal Interativo de Imagem:** Ao clicar na foto de qualquer criatura 🔍, uma janela modal se abre para visualização ampliada, contando com recursos de zoom por scroll 🖱️ e arraste por movimento do mouse ✋.
 
-## Expanding the ESLint configuration
+## 📂 Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+projeto-aula-react/
+├── public/
+│   └── imagens/          📂 # Imagens locais dos cards de criaturas
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Footer/       🦶 # Rodapé da aplicação
+│   │   ├── Header/       📌 # Cabeçalho da página
+│   │   └── Main/         🌟 # Conteúdo principal, cards e modal
+│   ├── App.jsx           ⚙️ # Componente raiz
+│   ├── main.jsx          🚀 # Ponto de entrada do React
+│   └── global.css        🎨 # Estilos globais
+├── package.json          📦
+└── README.md             📖
