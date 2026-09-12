@@ -1,0 +1,43 @@
+header {
+  background: linear-gradient(180deg, #020c1b 0%, var(--bg-dark) 100%);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid var(--accent-cyan);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: var(--accent-cyan);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Navegação semântica e acessível */
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+header nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Estado de foco/hover para acessibilidade de teclado e mouse */
+header nav a:hover,
+header nav a:focus {
+  color: var(--accent-cyan);
+  background-color: rgba(100, 255, 218, 0.1);
+  outline: 2px solid var(--accent-cyan);
+}

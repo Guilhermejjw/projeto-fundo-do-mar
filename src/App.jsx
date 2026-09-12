@@ -5,6 +5,9 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 
+//Importamos o componete de estilização global (estiliza os 3 componetes Footer, Header,Main  )
+import "./global.css";
+
 // Este é o componente principal (pai) da aplicação
 function App() {
   return (

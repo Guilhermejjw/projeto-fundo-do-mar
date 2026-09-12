@@ -1,0 +1,22 @@
+/* Reset simples e padronização da caixa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0a192f;        /* Azul bem escuro (abismo) */
+  --bg-card: #112240;        /* Azul intermediário (cards) */
+  --text-main: #e6f1ff;      /* Texto principal com alto contraste */
+  --text-secondary: #8892b0; /* Texto secundário */
+  --accent-cyan: #64ffda;     /* Destaque luminoso */
+  --accent-blue: #00b4d8;     /* Azul oceano para links */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+}
