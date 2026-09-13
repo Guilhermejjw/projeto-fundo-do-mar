@@ -134,7 +134,7 @@ function Main() {
                 className="modal-img"
               />
             </QuickPinchZoom>
-            <span className="modal-dica">Use a rodinha do mouse para dar zoom e arraste para mover</span>
+           
           </div>
         </div>
       )}
