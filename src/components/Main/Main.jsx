@@ -5,7 +5,7 @@ import "./Main.css";
 
 // Importações das imagens da pasta assets
 import peixe from "../../assets/peixe-pescador.jfif";
-import lula from "../../assets/lula-gigante.png";
+import lula from "../../assets/lulagigante-homem2.jpg";
 import peixebolha from "../../assets/peixe-bolha.avif";
 import tubarao from "../../assets/tubarao-duende.jpg";
 import transparente from "../../assets/peixe-olhos-de-barris.webp";
