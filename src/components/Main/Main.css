@@ -87,6 +87,11 @@ article p {
   opacity: 0.9;
 }
 
+main article img{
+  width: 100%;
+
+}
+
 /* --- MODAL E ZOOM --- */
 
 /* Fundo escuro do Modal (Overlay) */

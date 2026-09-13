@@ -3,6 +3,14 @@ import React, { useState, useRef, useCallback } from "react";
 import QuickPinchZoom from "react-quick-pinch-zoom";
 import "./Main.css";
 
+// Importações das imagens da pasta assets
+import peixe from "../../assets/peixe-pescador.jfif";
+import lula from "../../assets/lula-gigante.png";
+import peixebolha from "../../assets/peixe-bolha.avif";
+import tubarao from "../../assets/tubarao-duende.jpg";
+import transparente from "../../assets/peixe-olhos-de-barris.webp";
+import polvo from "../../assets/polvo-mimico.jpg";
+
 function Main() {
   // Estado que guarda a imagem selecionada para abrir no modal
   const [imagemSelecionada, setImagemSelecionada] = useState(null);
@@ -36,10 +44,10 @@ function Main() {
           {/* Card 1 */}
           <article>
             <img 
-              src="/src/imagens/peixe-pescador.jpg" 
+              src={peixe} 
               alt="Peixe-Pescador" 
               className="card-img"
-              onClick={() => setImagemSelecionada({ src: "/src/imagens/peixe-pescador.jpg", alt: "Peixe-Pescador" })}
+              onClick={() => setImagemSelecionada({ src: peixe, alt: "Peixe-Pescador" })}
             />
             <h4>Peixe-Pescador</h4>
             <p>Utiliza uma isca bioluminescente para atrair suas presas na escuridão total do oceano.</p>
@@ -48,10 +56,10 @@ function Main() {
           {/* Card 2 */}
           <article>
             <img 
-              src="/src/imagens/lula-gigante.jpg" 
+              src={lula} 
               alt="Lula-Gigante" 
               className="card-img"
-              onClick={() => setImagemSelecionada({ src: "/src/imagens/lula-gigante.jpg", alt: "Lula-Gigante" })}
+              onClick={() => setImagemSelecionada({ src: lula, alt: "Lula-Gigante" })}
             />
             <h4>Lula-Gigante</h4>
             <p>Possui os maiores olhos do reino animal, adaptados para enxergar na penumbra do fundo do mar.</p>
@@ -60,10 +68,10 @@ function Main() {
           {/* Card 3 */}
           <article>
             <img 
-              src="/src/imagens/peixe-bolha.jpg" 
+              src={peixebolha} 
               alt="Peixe-Bolha" 
               className="card-img"
-              onClick={() => setImagemSelecionada({ src: "/src/imagens/peixe-bolha.jpg", alt: "Peixe-Bolha" })}
+              onClick={() => setImagemSelecionada({ src: peixebolha, alt: "Peixe-Bolha" })}
             />
             <h4>Peixe-Bolha</h4>
             <p>Seu corpo gelatinoso e sem ossos permite resistir à extrema pressão das profundezas.</p>
@@ -72,10 +80,10 @@ function Main() {
           {/* Card 4 */}
           <article>
             <img 
-              src="/src/imagens/tubarao-duende.jpg" 
+              src={tubarao} 
               alt="Tubarão-Duende" 
               className="card-img"
-              onClick={() => setImagemSelecionada({ src: "/src/imagens/tubarao-duende.jpg", alt: "Tubarão-Duende" })}
+              onClick={() => setImagemSelecionada({ src: tubarao, alt: "Tubarão-Duende" })}
             />
             <h4>Tubarão-Duende</h4>
             <p>Espécie pré-histórica com uma mandíbula retrátil que se lança para a frente para capturar presas.</p>
@@ -84,10 +92,10 @@ function Main() {
           {/* Card 5 */}
           <article>
             <img 
-              src="/src/imagens/peixe-barris.jpg" 
+              src={transparente} 
               alt="Peixe-Olhos-de-Barris" 
               className="card-img"
-              onClick={() => setImagemSelecionada({ src: "/src/imagens/peixe-barris.jpg", alt: "Peixe-Olhos-de-Barris" })}
+              onClick={() => setImagemSelecionada({ src: transparente, alt: "Peixe-Olhos-de-Barris" })}
             />
             <h4>Peixe-Olhos-de-Barris</h4>
             <p>Possui a cabeça totalmente transparente e olhos verdes tubulares que giram internamente.</p>
@@ -96,10 +104,10 @@ function Main() {
           {/* Card 6 */}
           <article>
             <img 
-              src="/src/imagens/polvo-mimico.jpg" 
+              src={polvo} 
               alt="Polvo-Mímico" 
               className="card-img"
-              onClick={() => setImagemSelecionada({ src: "/src/imagens/polvo-mimico.jpg", alt: "Polvo-Mímico" })}
+              onClick={() => setImagemSelecionada({ src: polvo, alt: "Polvo-Mímico" })}
             />
             <h4>Polvo-Mímico</h4>
             <p>Consegue mudar de cor, textura e formato para imitar outros animais marinhos e enganar predadores.</p>
@@ -113,7 +121,12 @@ function Main() {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="fechar-btn" onClick={fecharModal} aria-label="Fechar modal">✕</button>
             
-            <QuickPinchZoom onUpdate={onUpdate} draggableUnZoomed={false}>
+           <QuickPinchZoom 
+              onUpdate={onUpdate} 
+              draggableUnZoomed={false}
+              tapZoomFactor={1}
+              doubleTapZoomFactor={2}
+            >
               <img
                 ref={imgRef}
                 src={imagemSelecionada.src}
